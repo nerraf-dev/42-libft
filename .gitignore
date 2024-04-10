@@ -1,0 +1,5 @@
+
+*.pdf
+*.old
+old/
+.normignore
