@@ -12,7 +12,7 @@ CPPFLAGS = -I$(INC_DIR)
 # generate list of source files, select all files starting with ft_
 # TODO: CHANGE THIS! List the files manually separated by space
 # SRC = $(wildcard ft_*.c)
-SRC = ft_isalpha.c ft_isdigit.c 
+SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c 
 
 # Object files
 # := tells make to append the result to the variable
