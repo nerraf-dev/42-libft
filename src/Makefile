@@ -47,7 +47,7 @@ $(NAME): $(OBJS)
 # The -c flag is used to compile the source files into object files
 # The -o flag is used to specify the output file
 %.o: %.c
-	$(CC) $(CFLAGS) -I. -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule to compile bonus source files into object files
 # The bonus rule is used to compile the bonus source files into object files
@@ -66,8 +66,10 @@ clean:
 	rm -f $(OBJS)
 
 # Rule to clean object files and the library
-fclean: clean
+fclean: clean clean_test
 	rm -f $(NAME)
 
 # Rule to rebuild the library
 re: fclean all
+
+.phony: all clean fclean re test clean_test
