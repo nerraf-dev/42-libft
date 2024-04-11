@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 22:02:40 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/10 22:11:55 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/10 22:23:38 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@
  * @param len Number of bytes to be filled.
  * @return Pointer to the memory block after it has been filled.
  */
-void	*ft_memset(void *mem, int c, unsigned int len)
+void	*ft_memset(void *b, int c, unsigned int len)
 {
-	unsigned char	*str;
 	unsigned int	i;
+	char			*str;
 
-	str = (unsigned char *)mem;
 	i = 0;
+	str = (char *)b;
 	while (i < len)
 	{
-		str[i] = (unsigned char)c;
+		str[i] = c;
 		i++;
 	}
-	return (mem);
+	return (b);
 }

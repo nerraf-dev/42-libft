@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/10 22:14:12 by sfarren          ###   ########.fr       */
+/*   Created: 2024/04/10 22:20:10 by sfarren           #+#    #+#             */
+/*   Updated: 2024/04/10 22:20:46 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+void    ft_bzero(void *s, unsigned int n)
+{
+    unsigned int	i;
+    char			*str;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_strlen(char *str);
-void	*ft_memset(void *mem, int c, unsigned int len);
-#endif
+    i = 0;
+    str = (char *)s;
+    while (i < n)
+    {
+        str[i] = 0;
+        i++;
+    }
+}
