@@ -3,3 +3,5 @@
 *.old
 old/
 .normignore
+
+*.o
