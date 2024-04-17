@@ -58,7 +58,8 @@ int main() {
         {test_ft_memchr, "ft_memchr locates a byte in a byte string"},
         {test_ft_memcmp, "ft_memcmp compares two memory areas"},
         {test_ft_memcpy, "ft_memcpy copies a block of memory from a source address to a destination address"},
-
+        {test_ft_memmove, "ft_memmove copies a block of memory from a source address to a destination address, handling overlapping memory regions correctly"},
+        
         };
 
 	int num_tests = sizeof(tests) / sizeof(t_test_case);

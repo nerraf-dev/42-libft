@@ -1,5 +1,6 @@
 #include "../libft.h"
 #include <stdio.h>
+#include <string.h>
 
 // Tests return 0 on success, 1 on failure
 int test_ft_memcpy()
