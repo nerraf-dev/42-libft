@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:51:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/13 14:21:48 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/17 11:35:04 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 	int	len;
 
 	i = 0;
-	len = ft_strlen(s);
+	len = ft_strlen((char *)s);
 	while (i <= len)
 	{
 		if (s[i] == (char)c)

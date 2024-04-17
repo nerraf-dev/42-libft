@@ -6,16 +6,17 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:08:54 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/15 18:24:33 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/17 12:12:02 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-char	*ft_strnstr(const char *content, const char *search_str, t_size len)
+char	*ft_strnstr(const char *content, const char *search_str, size_t len)
 {
-	t_size	i;
-	t_size	j;
+	size_t	i;
+	size_t	j;
+	size_t	start;
 
 	i = 0;
 	j = 0;
@@ -23,15 +24,18 @@ char	*ft_strnstr(const char *content, const char *search_str, t_size len)
 		return ((char *) content);
 	while (content[i] != '\0' && i < len)
 	{
-		if (content[i] == search_str[0])
+		start = i;
+		while (content[i] == search_str[j])
 		{
-			j = 0;
-			while (content[i + j] == search_str[j]
-				&& search_str[j] != '\0' && i + j < len)
-				j++;
+			i++;
+			j++;
 			if (search_str[j] == '\0')
-				return ((char *) content + i);
+				return ((char *)&content[start]);
+			if (i == len)
+				return (0);
 		}
+		i = start + 1;
+		j = 0;
 	}
 	return (0);
 }

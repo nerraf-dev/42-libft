@@ -1,7 +1,7 @@
 #include "../libft/libft.h"
 #include <stdio.h>
 
-int test_ft_upper()
+int test_ft_toupper()
 {
     char    c1 = 'a';
     if (ft_toupper(c1) != 'A')

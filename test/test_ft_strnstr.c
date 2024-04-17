@@ -40,6 +40,16 @@ int test_ft_strnstr()
         return 1;
     }
 
+    // Test case 4: Search string is longer than the larger string
+    ptr = ft_strnstr("lorem ipsum dolor sit amet", "ipsum", 15);
+    if (ptr != NULL)
+    {
+        printf("Test case 4 failed\n");
+        return 1;
+    }
+
+
+
     // All test cases passed
     printf("All test cases passed\n");
     return 0;

@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/15 18:13:26 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/17 11:50:53 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_size		ft_strlcpy(char *dest, const char *src, t_size size);
 t_size		ft_strlen(const char *str);
 int			ft_strncmp(const char *s1, const char *s2, t_size n);
 char		*ft_strnstr(const char *content,
-				const char *search_str,	t_size len);
+									const char	*search_str, t_size len);
 char		*ft_strrchr(const char *s, int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
