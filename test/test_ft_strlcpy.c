@@ -6,9 +6,9 @@
 int test_ft_strlcpy() {
     char dst[10];
     const char *src = "Hello";
-    t_size dstsize = sizeof(dst);
+    size_t dstsize = sizeof(dst);
 
-    t_size result = ft_strlcpy(dst, src, dstsize);
+    size_t result = ft_strlcpy(dst, src, dstsize);
 
     if (result != 5) {
         printf("FAIL: ft_strlcpy returns incorrect length\n");

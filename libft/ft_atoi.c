@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:53:26 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/14 16:14:05 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/17 12:22:45 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,5 @@ int	ft_atoi(char *str)
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-
 	return (result * sign);
 }

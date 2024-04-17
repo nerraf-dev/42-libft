@@ -6,15 +6,15 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 17:37:29 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/17 11:37:14 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/17 13:15:03 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, t_size n)
+int	ft_strncmp(const char *s1, const char *s2, size_tt n)
 {
-	t_size	i;
+	size_tt	i;
 
 	i = 0;
 	while (i < n)

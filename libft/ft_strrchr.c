@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:46:16 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/13 19:37:30 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/17 12:50:47 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	t_size	i;
+	size_t	i;
 	char	*last;
 
 	last = 0;
