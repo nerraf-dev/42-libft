@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 22:20:10 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/10 22:20:46 by sfarren          ###   ########.fr       */
+/*   Created: 2024/04/15 17:51:55 by sfarren           #+#    #+#             */
+/*   Updated: 2024/04/15 18:09:57 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_bzero(void *s, unsigned int n)
+int	ft_tolower(int c)
 {
-    unsigned int	i;
-    char			*str;
-
-    i = 0;
-    str = (char *)s;
-    while (i < n)
-    {
-        str[i] = 0;
-        i++;
-    }
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }

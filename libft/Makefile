@@ -56,7 +56,8 @@ $(NAME): $(OBJS)
 
 # test
 test: $(NAME)
-	$(CC) $(CCFLAGS) $(CPPFLAGS) -L. -lft main.c -o test_libft
+#	$(CC) $(CCFLAGS) $(CPPFLAGS) -L. -lft main.c -o test_libft
+	$(CC) $(CCFLAGS) $(CPPFLAGS) -L. -lft ../test/test_runner.c -o test_libft
 
 clean_test:
 	rm -f test_libft
@@ -66,8 +67,10 @@ clean:
 	rm -f $(OBJS)
 
 # Rule to clean object files and the library
-fclean: clean
+fclean: clean clean_test
 	rm -f $(NAME)
 
 # Rule to rebuild the library
 re: fclean all
+
+.phony: all clean fclean re test clean_test

@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 22:02:40 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/10 22:23:38 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/12 14:15:21 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@
  * @param len Number of bytes to be filled.
  * @return Pointer to the memory block after it has been filled.
  */
-void	*ft_memset(void *b, int c, unsigned int len)
+
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, t_size len)
 {
 	unsigned int	i;
 	char			*str;
