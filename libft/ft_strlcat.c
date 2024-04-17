@@ -6,13 +6,13 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:56:54 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/12 17:09:00 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/15 17:41:31 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size	ft_strlcat(char *dest, char *src, t_size size)
+t_size	ft_strlcat(char *dest, const char *src, t_size size)
 {
 	t_size	dest_count;
 	t_size	src_count;

@@ -1,5 +1,19 @@
-#include <stdio.h>
-// TODO: Implement ft_tolower
-void placeholder_function() {
-    printf("This is a placeholder function.\n");
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 17:51:55 by sfarren           #+#    #+#             */
+/*   Updated: 2024/04/15 18:09:57 by sfarren          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }

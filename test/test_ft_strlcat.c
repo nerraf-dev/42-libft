@@ -8,11 +8,13 @@ int test_ft_strlcat() {
     char src[] = " World!";
     size_t size = sizeof(dest);
 
+     size_t dest_len = strlen(dest);
+    size_t src_len = strlen(src);
     size_t result = ft_strlcat(dest, src, size);
 
     // Check if the result is correct
-    if (result != strlen(dest) + strlen(src)) {
-        printf("FAIL: ft_strlcat returned incorrect length\n");
+    if (result != dest_len + src_len) {
+        printf("FAIL: ft_strlcat returned %zu, expected %zu\n", result, dest_len + src_len);
         return 1;
     }
 

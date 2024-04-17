@@ -35,8 +35,9 @@ int main() {
         {test_ft_strlen, "ft_strlen returns the length of a string"},
         {test_ft_strncmp, "ft_strncmp compares two strings"},
         {test_ft_strrchr, "ft_strrchr returns a pointer to the last occurrence of a character in a string"},
-
-
+        {test_ft_strnstr, "ft_strnstr finds a substring in a string"},
+        {test_ft_tolower, "ft_tolower converts an uppercase character to lowercase"},
+        {test_ft_toupper, "ft_toupper converts a lowercase character to uppercase"},
         };
 
 	int num_tests = sizeof(tests) / sizeof(t_test_case);

@@ -57,7 +57,7 @@ $(NAME): $(OBJS)
 # test
 test: $(NAME)
 #	$(CC) $(CCFLAGS) $(CPPFLAGS) -L. -lft main.c -o test_libft
-	$(CC) $(CCFLAGS) $(CPPFLAGS) -L. -lft tests.c -o test_libft
+	$(CC) $(CCFLAGS) $(CPPFLAGS) -L. -lft ../test/test_runner.c -o test_libft
 
 clean_test:
 	rm -f test_libft

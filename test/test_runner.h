@@ -15,5 +15,8 @@ int test_ft_strlen();
 int test_ft_strlcpy();
 int test_ft_strncmp();
 int test_ft_strrchr();
+int test_ft_strnstr();
+int test_ft_tolower();
+int test_ft_toupper();
 
 #endif
