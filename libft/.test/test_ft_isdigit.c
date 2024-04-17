@@ -1,4 +1,4 @@
-#include "../libft/libft.h"
+#include "../libft.h"
 
 // Tests return 0 on success, 1 on failure
 int test_ft_isdigit() {

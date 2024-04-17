@@ -1,4 +1,4 @@
-#include "../libft/libft.h"
+#include "../libft.h"
 
 int test_ft_strchr() {
     const char *str = "Hello, World!";

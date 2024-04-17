@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "../libft/libft.h"
+#include "../libft.h"
 
 int test_ft_strrchr() {
     const char *str = "Hello, World!";

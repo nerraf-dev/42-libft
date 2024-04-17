@@ -18,5 +18,7 @@ int test_ft_strrchr();
 int test_ft_strnstr();
 int test_ft_tolower();
 int test_ft_toupper();
+int test_ft_memcmp();
+int test_ft_memchr();
 
 #endif

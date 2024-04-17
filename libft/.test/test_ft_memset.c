@@ -1,7 +1,6 @@
-#include <assert.h>
 #include <stdio.h>
 #include <string.h>
-#include "../libft/libft.h"
+#include "../libft.h"
 
 int test_ft_memset() {
     char test1[10] = "Hello";

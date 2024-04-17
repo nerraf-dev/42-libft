@@ -1,4 +1,4 @@
-#include "../libft/libft.h"
+#include "../libft.h"
 #include "test_runner.h"
 #include <stdio.h>
 
@@ -8,12 +8,29 @@ typedef struct s_test_case {
 } t_test_case;
 
 void run_tests(t_test_case *tests, int num_tests) {
+    int passed_tests = 0;
+    int failed_tests = 0;
+    char *failed_tests_desc[num_tests];
+
     for (int i = 0; i < num_tests; i++) {
         int result = tests[i].test_func();
         if (result == 0) {
             printf("PASS: %s\n", tests[i].description);
+            passed_tests++;
         } else {
-            printf("FAIL: %s\n", tests[i].description);
+            printf("\n\033[1;31mFAIL: %s\033[0m\n\n", tests[i].description);
+            failed_tests_desc[failed_tests] = tests[i].description;
+            failed_tests++;
+        }
+    }
+
+    printf("\n\nTest Overview:\n");
+    printf("Passed tests: %d\n", passed_tests);
+    printf("Failed tests: %d\n", failed_tests);
+    if (failed_tests > 0) {
+        printf("\nFailed test cases:\n");
+        for (int i = 0; i < failed_tests; i++) {
+            printf("%s\n", failed_tests_desc[i]);
         }
     }
 }
@@ -38,6 +55,9 @@ int main() {
         {test_ft_strnstr, "ft_strnstr finds a substring in a string"},
         {test_ft_tolower, "ft_tolower converts an uppercase character to lowercase"},
         {test_ft_toupper, "ft_toupper converts a lowercase character to uppercase"},
+        {test_ft_memchr, "ft_memchr locates a byte in a byte string"},
+        {test_ft_memcmp, "ft_memcmp compares two memory areas"},
+
         };
 
 	int num_tests = sizeof(tests) / sizeof(t_test_case);

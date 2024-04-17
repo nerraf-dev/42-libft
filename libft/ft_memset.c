@@ -6,14 +6,14 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 22:02:40 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/17 13:14:58 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/17 19:14:35 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * Fills a block of memory with a specified value.
  *
- * @param mem Pointer to the memory block to be filled.
+ * @param b Pointer to the memory block to be filled.
  * @param c The value to be set. It is passed as an int, but internally
  *          it is converted to an unsigned char.
  * @param len Number of bytes to be filled.

@@ -10,9 +10,7 @@ CCFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I$(INC_DIR)
 
 # generate list of source files, select all files starting with ft_
-# TODO: CHANGE THIS! List the files manually separated by space
-# SRC = $(wildcard ft_*.c)
-SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c
+SRC = ft_atoi.c ft_isalpha.c ft_isprint.c ft_memcpy.c ft_strchr.c ft_strlen.c ft_strrchr.c ft_bzero.c ft_isascii.c ft_memchr.c ft_memmove.c    ft_strlcat.c ft_strncmp.c ft_tolower.c ft_isalnum.c ft_isdigit.c ft_memcmp.c ft_memset.c ft_strlcpy.c  ft_strnstr.c ft_toupper.c ft_strchr.c
 
 # Object files
 # := tells make to append the result to the variable
@@ -54,23 +52,12 @@ $(NAME): $(OBJS)
 # bonus: $(OBJS) $(BONUS_OBJS)
 # 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
-# test
-test: $(NAME)
-#	$(CC) $(CCFLAGS) $(CPPFLAGS) -L. -lft main.c -o test_libft
-	$(CC) $(CCFLAGS) $(CPPFLAGS) -L. -lft ../test/test_runner.c -o test_libft
-
-clean_test:
-	rm -f test_libft
-
-# Rule to clean object files
 clean:
 	rm -f $(OBJS)
 
-# Rule to clean object files and the library
-fclean: clean clean_test
+fclean: clean
 	rm -f $(NAME)
 
-# Rule to rebuild the library
 re: fclean all
 
 .phony: all clean fclean re test clean_test

@@ -1,4 +1,4 @@
-#include "../libft/libft.h"
+#include "../libft.h"
 #include <stdio.h>
 
 // Tests return 0 on success, 1 on failure

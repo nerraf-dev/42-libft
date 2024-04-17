@@ -1,6 +1,6 @@
 // FILEPATH: /Users/simon/Library/CloudStorage/GoogleDrive-geeky.teacher.cs@gmail.com/My Drive/Campus42/Projects/libft/test/test_ft_bzero.c
 
-#include "../libft/libft.h"
+#include "../libft.h"
 #include <string.h>
 
 // Tests return 0 on success, 1 on failure

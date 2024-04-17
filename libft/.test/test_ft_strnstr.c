@@ -1,4 +1,4 @@
-#include "../libft/libft.h"
+#include "../libft.h"
 #include <stdio.h>
 
 // Tests return 0 on success, 1 on failure
@@ -10,14 +10,14 @@ int test_ft_strnstr()
 
     // Test case 1: Search string is present in the larger string
     ptr = ft_strnstr(largestring, smallstring, 12);
-    if (ptr != NULL)
+    if (ptr == NULL)
     {
         printf("Test case 1 failed\n");
         return 1;
     }
 
     // Test case 2: Search string is not present in the larger string
-    ptr = ft_strnstr(largestring, smallstring, 8);
+    ptr = ft_strnstr(largestring, smallstring, 4);
     if (ptr != NULL)
     {
         printf("Test case 2 failed\n");
