@@ -20,5 +20,6 @@ int test_ft_tolower();
 int test_ft_toupper();
 int test_ft_memcmp();
 int test_ft_memchr();
+int test_ft_memcpy();
 
 #endif

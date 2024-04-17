@@ -57,6 +57,7 @@ int main() {
         {test_ft_toupper, "ft_toupper converts a lowercase character to uppercase"},
         {test_ft_memchr, "ft_memchr locates a byte in a byte string"},
         {test_ft_memcmp, "ft_memcmp compares two memory areas"},
+        {test_ft_memcpy, "ft_memcpy copies a block of memory from a source address to a destination address"},
 
         };
 
