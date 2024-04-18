@@ -1,24 +1,28 @@
-#include <stdio.h>
+#include <assert.h>
 #include <string.h>
-#include "libft.h"
+#include "tests.h"
 
-int main(void)
+void test_ft_bzero()
 {
-    char str1[10] = "Hello";
-    char str2[10] = "World";
-    char str3[10] = "123456789";
+    char str[10] = "Hello";
     
-    // Test 1: Zero out the first 5 characters of str1
-    ft_bzero(str1, 5);
-    printf("Test 1: %s\n", str1); // Expected output: "     o"
+    // Test case 1: Check if ft_bzero sets the memory to zero
+    ft_bzero(str, sizeof(str));
+    for (size_t i = 0; i < sizeof(str); i++)
+    {
+        assert(str[i] == '\0' && "Test case 1 failed: ft_bzero did not set the memory to zero");
+    }
     
-    // Test 2: Zero out the entire str2
-    ft_bzero(str2, strlen(str2));
-    printf("Test 2: %s\n", str2); // Expected output: ""
+    // Test case 2: Check if ft_bzero handles empty string correctly
+    strcpy(str, "Hello"); // Reset the string
+    ft_bzero(str, 0);
+    assert(strcmp(str, "Hello") == 0 && "Test case 2 failed: ft_bzero modified the string when n is 0");
     
-    // Test 3: Zero out the first 3 characters of str3
-    ft_bzero(str3, 3);
-    printf("Test 3: %s\n", str3); // Expected output: "   456789"
-    
-    return 0;
+    // Test case 3: Check if ft_bzero handles large n correctly
+    char large_str[1000] = "Large String";
+    ft_bzero(large_str, sizeof(large_str));
+    for (unsigned long i = 0; i < sizeof(large_str); i++)
+    {
+        assert(large_str[i] == 0 && "Test case 3 failed: ft_bzero did not set the memory to zero for large n");
+    }
 }

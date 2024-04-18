@@ -2,6 +2,8 @@
 *.pdf
 *.old
 old/
+_OLD/
 .normignore
-
+.DS_Store
+.vscode/
 *.o

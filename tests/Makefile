@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-LDFLAGS = -L.. -lft
-NAME = test_runner
-SRCS = $(wildcard test_*.c)
+LDFLAGS = -L../libft -lft
+NAME = tests
+SRCS = tests.c $(wildcard test_*.c)
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

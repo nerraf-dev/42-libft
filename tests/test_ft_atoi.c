@@ -1,40 +1,39 @@
-#include "tests.h" // Include the header file for the function you're testing
+#include <assert.h>
+#include "tests.h"
 
-void test_ft_atoi(void)
+void test_ft_atoi()
 {
     // Test case 1: Positive number
-    char str1[] = "12345";
-    int expected1 = 12345;
-    int result1 = ft_atoi(str1);
-    assert(result1 == expected1);
+    assert(ft_atoi("12345") == 12345);
 
     // Test case 2: Negative number
-    char str2[] = "-9876";
-    int expected2 = -9876;
-    int result2 = ft_atoi(str2);
-    assert(result2 == expected2);
+    assert(ft_atoi("-9876") == -9876);
 
     // Test case 3: Number with leading whitespace
-    char str3[] = "    42";
-    int expected3 = 42;
-    int result3 = ft_atoi(str3);
-    assert(result3 == expected3);
+    assert(ft_atoi("   42") == 42);
 
-    // Test case 4: Number with trailing characters
-    char str4[] = "123abc";
-    int expected4 = 123;
-    int result4 = ft_atoi(str4);
-    assert(result4 == expected4);
+    // Test case 4: Number with trailing whitespace
+    assert(ft_atoi("1000   ") == 1000);
 
-    // Test case 5: Number with leading sign
-    char str5[] = "+789";
-    int expected5 = 789;
-    int result5 = ft_atoi(str5);
-    assert(result5 == expected5);
+    // Test case 5: Number with leading and trailing whitespace
+    assert(ft_atoi("   -500   ") == -500);
 
-    // Test case 6: Empty string
-    char str6[] = "";
-    int expected6 = 0;
-    int result6 = ft_atoi(str6);
-    assert(result6 == expected6);
+    // Test case 6: Number with leading plus sign
+    assert(ft_atoi("+123") == 123);
+
+    // Test case 7: Number with leading minus sign
+    assert(ft_atoi("-789") == -789);
+
+    // Test case 8: Empty string
+    assert(ft_atoi("") == 0);
+
+    // Test case 9: String with non-numeric characters
+    assert(ft_atoi("abc123") == 0);
+
+    // Test case 10: String with only whitespace
+    assert(ft_atoi("   ") == 0);
+
+    // Add more test cases here...
+
+    printf("All tests passed successfully!\n");
 }
