@@ -7,3 +7,4 @@ _OLD/
 .DS_Store
 .vscode/
 *.o
+*.a
