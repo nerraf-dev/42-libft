@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/23 14:21:57 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/23 16:06:54 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,6 @@ int			ft_tolower(int c);
 int			ft_toupper(int c);
 void		*ft_calloc(size_t nmemb, size_t size);
 char		*ft_strdup(const char *str);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 #endif
