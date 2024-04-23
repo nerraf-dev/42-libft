@@ -6,12 +6,13 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/18 20:10:25 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/23 14:21:57 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
 # define LIBFT_H
 
 int			ft_atoi(const char *str);
@@ -38,5 +39,4 @@ int			ft_tolower(int c);
 int			ft_toupper(int c);
 void		*ft_calloc(size_t nmemb, size_t size);
 char		*ft_strdup(const char *str);
-
 #endif
