@@ -20,12 +20,12 @@
  * @param start The start index of the substring in the string 's'.
  * @param len The maximum length of the substring.
  * @return The substring if successful, NULL if the allocation fails.
-
-	Hints:
-	* First we have to check if the start index is greater than the length of the string or not.
-	* We also have to check if the start plus the len is greater than the length of the whole string.
-	* Then we allocate enough memory for the substring, and copy from s[start] until we reach len characters copied into our new string.
-	* And finally we can return the substring.
+ 
+* First check if the start index is greater than the length of the string or not.
+* also check if the start plus the len is greater than the length of the whole string.
+* allocate enough memory for the substring, and copy from s[start] until we reach len characters copied into our new string.
+* DO NOT forget to NULL terminate the string!!
+* And finally we can return the substring.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
