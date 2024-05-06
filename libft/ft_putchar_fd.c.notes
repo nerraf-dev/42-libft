@@ -1,0 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putcharfd.c.notes                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/29 12:59:04 by sfarren           #+#    #+#             */
+/*   Updated: 2024/04/29 13:02:39 by sfarren          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/**
+ * Outputs the character 'c' to the given file descriptor.
+ *
+ * @param c The character to output.
+ * @param fd The file descriptor on which to write.
+ * @return None
+ */
+void ft_putchar_fd(char c, int fd)
+{
+    
+}
+/*
+
+In C++, file descriptors are integer values that represent open files or input/output resources. The file descriptor is used to identify and manipulate files, sockets, pipes, and other I/O resources.
+
+Here are some common options for file descriptors:
+
+1. Standard Input (stdin): The file descriptor value for standard input is 0. It represents the input stream from the keyboard or another input source.
+
+2. Standard Output (stdout): The file descriptor value for standard output is 1. It represents the output stream where the program writes its normal output.
+
+3. Standard Error (stderr): The file descriptor value for standard error is 2. It represents the output stream where the program writes error messages or diagnostic information.
+
+4. File Descriptors for Open Files: When you open a file using functions like `open()` or `fopen()`, you will receive a file descriptor as a return value. This file descriptor can be used to read from or write to the opened file.
+
+5. Network Sockets: In network programming, file descriptors are often used to represent network sockets. Sockets allow communication between different processes or machines over a network. The file descriptor for a socket can be obtained using functions like `socket()` or `accept()`.
+
+6. Pipes: Pipes are used for inter-process communication. They allow the output of one process to be connected to the input of another process. The file descriptors for the read and write ends of a pipe can be obtained using functions like `pipe()`.
+
+These are just a few examples of the options for file descriptors. The specific options available to you will depend on the context and requirements of your project.
+
+*/

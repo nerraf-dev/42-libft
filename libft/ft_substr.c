@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:53:55 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/23 16:33:28 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/04/29 12:42:53 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@
  * @param len The maximum length of the substring.
  * @return The substring if successful, NULL if the allocation fails.
  
-* First check if the start index is greater than the length of the string or not.
-* also check if the start plus the len is greater than the length of the whole string.
-* allocate enough memory for the substring, and copy from s[start] until we reach len characters copied into our new string.
-* DO NOT forget to NULL terminate the string!!
-* And finally we can return the substring.
+Check if the start index is greater than the length of the string or not.
+Check if the start plus the len is greater than the length of the whole string.
+Allocate enough memory for the substring, 
+Copy from s[start] until we reach len characters copied into our new string.
+Finally we can return the substring.
+ 
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -33,26 +34,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 	int		j;
 
+	if (!s)
+		return (0);
 	if (start > ft_strlen(s))
-		return (0);
+		return (ft_strdup(""));
 	if (start + len > ft_strlen(s))
-		return (0);
-	substr = malloc(len + 1);
+		len = ft_strlen(s) - start;
+	substr = ft_calloc(len + 1, 1);
 	if (!substr)
 		return (0);
-	if (ft_strlen(s) == 0)
-		substr[i] = '\0';
-	else
+	i = 0;
+	j = start;
+	while (i < len)
 	{
-		i = 0;
-		j = start;
-		while (s[i] != '\0' && j < len)
-		{
-			substr[i] = s[j];
-			i++;
-			j++;
-		}
-		substr[i] = '\0';
+		substr[i] = s[j];
+		i++;
+		j++;
 	}
-
+	return (substr);
 }
