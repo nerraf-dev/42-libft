@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:08:09 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/17 14:15:02 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/18 11:06:18 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_itoa(int n)
 {
 	char	*int_str;
 	int		int_len;
-	int		num;
+	long		num;  //To hopefully deal with the max and min ints!
 	int		i;
 
 	// Get integer length. The sign is included in the return value.

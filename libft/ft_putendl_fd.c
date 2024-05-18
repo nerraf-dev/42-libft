@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:11:38 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/18 10:32:13 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/18 11:27:15 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  */
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	int		i;
 	char	nl;
 
 	i = 0;

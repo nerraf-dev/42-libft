@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:08:09 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/17 16:24:00 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/18 11:00:39 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ static int	int_length(int n);
 
 char	*ft_itoa(int n)
 {
-	char	*int_str;
-	int		int_len;
-	int		num;
-	int		i;
+	char		*int_str;
+	int			int_len;
+	int			i;
+	long		num;
 
 	int_len = int_length(n);
 	num = n;
