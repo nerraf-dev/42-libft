@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:05:34 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/21 13:01:01 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/21 12:57:45 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,14 @@ int	is_in_set(char c, const char *set)
 		i++;
 	}
 	return (0);
+}
+
+int main(void)
+{
+	char *str;
+	// ft_strtrim("hello. ", " .");
+	str = ft_strtrim("lorem ipsum dolor sit amet", "tel");
+	printf("trimmed: %s\n", str);
+	str = ft_strtrim("    ", " ");
+	printf("trimmed: %s\n", str);
 }

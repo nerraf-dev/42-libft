@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/18 10:40:36 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/21 12:08:26 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ void		ft_putstr_fd(char *str, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putendl_fd(char *s, int fd);
 char		*ft_itoa(int n);
+char		*ft_strtrim(char const *s1, char const *set);
 
 #endif
