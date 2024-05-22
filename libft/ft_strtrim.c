@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:05:34 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/21 13:01:01 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/21 13:16:28 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ from the beginning and the end of the string.
 	The trimmed string.
 	NULL if the allocation fails.
 */
-int	is_in_set(char c, const char *set);
+static int	is_in_set(char c, const char *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -54,7 +54,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trimmed);
 }
 
-int	is_in_set(char c, const char *set)
+static int	is_in_set(char c, const char *set)
 {
 	int	i;
 
