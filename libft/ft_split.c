@@ -6,14 +6,12 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:07:03 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/22 21:39:21 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/23 17:43:03 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-
-//TODO: ft_split
 /*
 Parameters
 	s:  The string to be split.
@@ -32,7 +30,6 @@ static char	*store_word(const char *str, int start, int end);
 static void	*ft_free(char **words, int count);
 static char	**init_words(char const *s, char c);
 
-
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
@@ -45,11 +42,8 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	new_word = -1;  // set to -1 as this will hold the index for the new word
-	// if (!s || !c || s[i] == c)
-	// 	return (0);
 	words = init_words(s, c);
-	if (!words)
-		return (0);
+	
 	while (i < len)
 	{
 		if (s[i] != c && new_word == -1)
@@ -70,9 +64,11 @@ char	**ft_split(char const *s, char c)
 static char	**init_words(char const *s, char c)
 {
 	size_t	count;
+	char	**words;
 
 	count = word_count(s, c);
-	return (ft_calloc(count + 1, sizeof(char *)));
+
+	words = ft_calloc(count + 1, sizeof(char *));
 }
 
 static char	*store_word(const char *str, int start, int end)
@@ -143,10 +139,17 @@ static void	*ft_free(char **words, int count)
 
 int main(void)
 {
+	test_split("lorem ipsum dolor sit amet", ' ');
+
+	return 0;
+}
+
+int test_split(char const *s, char c)
+{
 	char **words;
 	int i = 0;
 
-	words = ft_split("lorem ipsum dolor sit amet", ' ');
+	words = ft_split(s, c);
 
 	while (words[i])
 	{
@@ -162,8 +165,5 @@ int main(void)
 		i++;
 	}
 	free(words);
-
 	return 0;
 }
-
-int test_split()

@@ -1,6 +1,6 @@
 NAME = libft.a
 
-CC = gcc
+CC = clang #gcc
 CCFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I.
 
