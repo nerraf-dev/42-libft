@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:07:03 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/22 21:39:21 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/24 02:46:45 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	new_word = -1;  // set to -1 as this will hold the index for the new word
-	// if (!s || !c || s[i] == c)
-	// 	return (0);
 	words = init_words(s, c);
 	if (!words)
 		return (0);
@@ -166,4 +164,3 @@ int main(void)
 	return 0;
 }
 
-int test_split()
