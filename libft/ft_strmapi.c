@@ -6,34 +6,66 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:09:08 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/24 14:27:36 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/25 15:16:55 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 /*
-params
- s: The string on which to iterate.
- f: The function to apply to each character.
-
-return:
- The string created from the successive applications
- of ’f’.
- Returns NULL if the allocation fails.
-
-Desc:
- Applies the function f to each character of the
- string s, passing its index as the first argument
- and the character itself as the second. A new
- string is created (using malloc(3)) to collect the
- results from the successive applications of f.
+Parameters
+	s:  The string on which to iterate.
+	f:  The function to apply to each character.
+Return value
+	The string created from the successive applications
+	of ’f’.
+	Returns NULL if the allocation fails.
+Description
+	Applies the function ’f’ to each character of the
+	string ’s’, and passing its index as first argument
+	to create a new string (with malloc(3)) resulting
+	from successive applications of ’f’
 */
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	uppercase(unsigned int i, char c);
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	// get s len
-	// allocate mem (malloc) for new str
-	// if malloc fails retun 0
-	// iterate over string, applying func 'f'
-	// write f return value to new string
-	//return new string
+	// Get length of string 's'
+	// Allocate array of string length (plus null char)
+	//  return null if allocation fails
+	// Iterate over s
+	//   call function on each character
+	//    write return value to array
+	//return result
+	size_t	len;
+	size_t	i;
+	char	*str;
+
+	len = ft_strlen(s);
+	str = malloc(len + 1);
+	i = 0;
+	if (!str)
+		return (0);
+	while (s[i] != '\0')
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+int	main(void)
+{
+	char	*s;
+
+	s = ft_strmapi("hello", uppercase);
+	printf("result: %s\n", s);
+}
+
+char	uppercase(unsigned int i, char c)
+{
+	if (c >= 97 && c <= 122)
+		c -= 32;
+	return (c);
 }

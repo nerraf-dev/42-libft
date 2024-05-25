@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:07:03 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/23 17:43:03 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/25 15:16:05 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,3 +167,4 @@ int test_split(char const *s, char c)
 	free(words);
 	return 0;
 }
+
