@@ -6,12 +6,11 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:09:08 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/26 21:25:49 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/27 13:53:14 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 /*
 Parameters
 	s:  The string on which to iterate.
@@ -26,8 +25,6 @@ Description
 	to create a new string (with malloc(3)) resulting
 	from successive applications of ’f’
 */
-char	sentence_case(unsigned int i, char c);
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	len;
@@ -46,31 +43,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	str[i] = '\0';
 	return (str);
-}
-
-int	main(void)
-{
-	char	*s;
-
-	s = ft_strmapi("hello, world!", sentence_case);
-	printf("result: %s\n", s);
-	s = ft_strmapi("HELLO, WORLD!", sentence_case);
-	printf("result: %s\n", s);
-	s = ft_strmapi("heLLo, WoRld!", sentence_case);
-	printf("result: %s\n", s);
-}
-
-char	sentence_case(unsigned int i, char c)
-{
-	if (i == 0)
-	{
-		if (c >= 97 && c <= 122)
-			c -= 32;
-	}
-	if (i > 0)
-	{
-		if (c >= 65 && c <= 90)
-			c += 32;
-	}
-	return (c);
 }
