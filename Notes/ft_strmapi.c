@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:09:08 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/26 21:25:49 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/26 21:22:41 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@ char	sentence_case(unsigned int i, char c);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	// Get length of string 's'
+	// Allocate array of string length (plus null char)
+	//  return null if allocation fails
+	// Iterate over s
+	//   call function on each character
+	//    write return value to array
+	//return result
 	size_t	len;
 	size_t	i;
 	char	*str;

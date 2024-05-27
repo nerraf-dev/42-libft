@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:07:03 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/25 15:16:05 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/27 12:45:45 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ static int	word_count(char const *s, char c);
 static char	*store_word(const char *str, int start, int end);
 static void	*ft_free(char **words, int count);
 static char	**init_words(char const *s, char c);
+
+int test_split(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -69,6 +71,9 @@ static char	**init_words(char const *s, char c)
 	count = word_count(s, c);
 
 	words = ft_calloc(count + 1, sizeof(char *));
+	if (!words)
+		return (0);
+	return (words);
 }
 
 static char	*store_word(const char *str, int start, int end)
@@ -137,12 +142,12 @@ static void	*ft_free(char **words, int count)
 // 	// ft_split(",", ',');
 // }
 
-int main(void)
-{
-	test_split("lorem ipsum dolor sit amet", ' ');
+// int main(void)
+// {
+// 	test_split("lorem ipsum dolor sit amet", ' ');
 
-	return 0;
-}
+// 	return 0;
+// }
 
 int test_split(char const *s, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/24 17:26:48 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/27 12:46:41 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ void		ft_putendl_fd(char *s, int fd);
 char		*ft_itoa(int n);
 char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
