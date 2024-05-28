@@ -23,5 +23,5 @@ void test_ft_isprint(void)
 
     // Add more test cases here...
 
-    printf("All tests passed successfully!\n");
+    printf("ft_isprint passed successfully!\n");
 }

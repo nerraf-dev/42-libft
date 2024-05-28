@@ -18,7 +18,23 @@ void test_ft_memcpy()
     ft_memcpy(dest, "", 1);
     assert(dest[0] == '\0' && "Test case 3 failed: Copying an empty string");
 
-    // Add more test cases here...
+    // Test case 4: Copying from a larger source to a smaller destination
+    char src2[] = "This is a longer string";
+    char dest2[10];
+    ft_memcpy(dest2, src2, sizeof(dest2));
+    assert(strncmp(dest2, src2, sizeof(dest2)) == 0 && "Test case 4 failed: Copying from a larger source to a smaller destination");
 
-    printf("All test cases passed for ft_memcpy!\n");
+    // Test case 5: Copying from a smaller source to a larger destination
+    char src3[] = "Short";
+    char dest3[10];
+    ft_memcpy(dest3, src3, sizeof(src3));
+    assert(strncmp(dest3, src3, sizeof(src3)) == 0 && "Test case 5 failed: Copying from a smaller source to a larger destination");
+
+    // Test case 6: Copying a null-terminated string
+    char src4[] = "Hello, World!";
+    char dest4[20];
+    ft_memcpy(dest4, src4, strlen(src4) + 1);
+    assert(strcmp(dest4, src4) == 0 && "Test case 6 failed: Copying a null-terminated string");
+
+    printf("ft_memcpy passed!\n");
 }

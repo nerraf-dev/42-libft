@@ -22,7 +22,7 @@ void test_ft_isdigit(void)
     assert(ft_isdigit('\n') == 0);
     assert(ft_isdigit('$') == 0);
 
-    // Add more test cases here
+
 
     printf("All tests passed successfully!\n");
 }

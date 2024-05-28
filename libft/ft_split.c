@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:07:03 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/27 18:38:07 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/27 21:48:43 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ static void	init_vars(size_t *i, int *j, int *s_word);
  * @param c The delimiter character.
  * @return An array of substrings, or NULL if memory allocation fails.
  */
+
 char	**ft_split(const char *s, char c)
 {
 	char	**words;

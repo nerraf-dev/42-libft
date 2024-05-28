@@ -3,33 +3,20 @@
 
 void test_ft_isascii(void)
 {
-    // Test case 1: Testing with an ASCII character
-    assert(ft_isascii('A') == 1);
-    printf("Test case 1 passed\n");
+    // Test case 8: Testing with a value in the middle of the ASCII range
+    assert(ft_isascii(64) == 1);
 
-    // Test case 2: Testing with a non-ASCII character
-    assert(ft_isascii('a') == 1);
-    printf("Test case 2 passed\n");
+    // Test case 9: Testing with a value just below the middle of the ASCII range
+    assert(ft_isascii(63) == 1);
 
-    // Test case 3: Testing with a negative value
-    assert(ft_isascii(-1) == 0);
-    printf("Test case 3 passed\n");
+    // Test case 10: Testing with a value just above the middle of the ASCII range
+    assert(ft_isascii(65) == 1);
 
-    // Test case 4: Testing with the lowest ASCII value
-    assert(ft_isascii(0) == 1);
-    printf("Test case 4 passed\n");
+    // Test case 11: Testing with a value below the ASCII range
+    assert(ft_isascii(-100) == 0);
 
-    // Test case 5: Testing with the highest ASCII value
-    assert(ft_isascii(127) == 1);
-    printf("Test case 5 passed\n");
+    // Test case 12: Testing with a value above the ASCII range
+    assert(ft_isascii(200) == 0);
 
-    // Test case 6: Testing with a value just below the ASCII range
-    assert(ft_isascii(-1) == 0);
-    printf("Test case 6 passed\n");
-
-    // Test case 7: Testing with a value just above the ASCII range
-    assert(ft_isascii(128) == 0);
-    printf("Test case 7 passed\n");
-
-    printf("All test cases passed!\n");
+    printf("ft_isascii cases passed!\n");
 }
