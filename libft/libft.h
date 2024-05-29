@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/28 13:42:45 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/29 15:50:45 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,19 @@
 # include <stdlib.h>
 # include <unistd.h>
 # define LIBFT_H
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+typedef struct s_vars
+{
+	size_t	i;
+	int		j;
+	int		s_word;
+}			t_vars;
 
 int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
@@ -60,19 +73,5 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-typedef struct s_vars
-{
-	size_t		i;
-	int			j;
-	int			s_word;
-}				t_vars;
 
 #endif
