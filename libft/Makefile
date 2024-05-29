@@ -9,11 +9,11 @@ SRC = ft_atoi.c ft_isalpha.c ft_isprint.c ft_memcpy.c ft_strchr.c ft_strlen.c ft
 OBJS = $(SRC:.c=.o)
 
 # BONUS: Add bonus files to the list of source files
-# BONUS_SRC = 
+BONUS_SRC = ft_lstadd_back.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstsize.c ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c ft_lstnew.c
 
 # BONUS_OBJS is a variable containing all bonus .o filenames.
 # This works the same way as the OBJS variable.
-# BONUS_OBJS := $(BONUS_SRC:%.c=%.o)
+BONUS_OBJS := $(BONUS_SRC:%.c=%.o)
 
 all: $(NAME)
 
@@ -25,8 +25,8 @@ $(NAME): $(OBJS)
 
 # Rule to compile bonus source files into object files
 # The bonus rule is used to compile the bonus source files into object files
-# bonus: $(OBJS) $(BONUS_OBJS)
-# 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	rm -f $(OBJS)

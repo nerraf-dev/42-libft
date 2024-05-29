@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 11:23:03 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/28 13:10:23 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/28 21:32:47 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,9 @@
  */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	// if there is somethign new...
 	if (new)
 	{
-		// set the new itms 'next' prop to the original node lst
 		new->next = *lst;
-		// assign the new node to the lst pointer
 		*lst = new;
 	}
 }
