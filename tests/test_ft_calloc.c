@@ -29,5 +29,5 @@ void test_ft_calloc()
     assert(ptr3 != NULL);
     free(ptr3);
 
-    printf("All tests passed successfully!\n");
+    printf("ft_calloc passed successfully!\n");
 }

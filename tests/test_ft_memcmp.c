@@ -21,7 +21,7 @@ void test_ft_memcmp()
     result = ft_memcmp(str5, str6, 5);
     assert(result != 0 && "Test case 3 failed: Expected non-zero");
 
-    // Add more test cases here...
+    
 
-    printf("All test cases passed!\n");
+    printf("ft_memcmp passed!\n");
 }

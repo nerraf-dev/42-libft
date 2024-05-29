@@ -35,5 +35,5 @@ void test_ft_atoi()
 
     // Add more test cases here...
 
-    printf("All tests passed successfully!\n");
+    printf("ft_atoi passed successfully!\n");
 }

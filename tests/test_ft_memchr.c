@@ -21,4 +21,6 @@ void test_ft_memchr()
     ch = 'i';
     result = ft_memchr(long_str, ch, strlen(long_str));
     assert(result != NULL && "Test failed: character not found in long string");
+
+    printf("ft_memchr passed successfully!\n");
 }

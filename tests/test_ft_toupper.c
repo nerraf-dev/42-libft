@@ -18,7 +18,7 @@ void test_ft_toupper(void)
     assert(ft_toupper('$') == '$');
     assert(ft_toupper('\n') == '\n');
 
-    // Add more test cases here...
 
-    printf("All tests passed successfully!\n");
+
+    printf("ft_toupper passed successfully!\n");
 }

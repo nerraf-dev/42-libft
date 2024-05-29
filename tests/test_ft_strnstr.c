@@ -9,5 +9,5 @@ void test_ft_strnstr(void)
     assert(ft_strnstr("Hello", "Hello, world!", 5) == NULL);
     assert(ft_strnstr("Hello, world!", "world", 5) == NULL);
 
-    printf("All tests passed!\n");
+    printf("ft_strnstr passed!\n");
 }

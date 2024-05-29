@@ -14,4 +14,6 @@ void test_ft_tolower(void)
     // Test non-alphabetic characters
     assert(ft_tolower('1') == '1');
     assert(ft_tolower('$') == '$');
+
+    printf("ft_tolower passed successfully!\n");
 }

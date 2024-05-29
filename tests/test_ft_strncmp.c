@@ -16,9 +16,9 @@ void test_ft_strncmp()
     assert(ft_strncmp("hello world", "hello", 5) == 0);
     
     // Test case 5: Comparing strings with different lengths
-    assert(ft_strncmp("hello", "hello world", 10) == 0);
+    assert(ft_strncmp("hello", "hello world", 10) < 0);
     
-    // Add more test cases here...
+
     
-    printf("All tests passed successfully!\n");
+    printf("ft_strncmp passed successfully!\n");
 }
