@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:08:09 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/23 13:26:44 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/28 10:34:28 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	src_len;
 
+	if (src == NULL)
+		return (0);
 	i = 0;
 	src_len = ft_strlen(src);
 	if (dstsize != 0)

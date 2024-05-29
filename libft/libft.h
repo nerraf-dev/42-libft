@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/27 15:45:52 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/28 13:42:45 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,28 @@ char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+t_list		*ft_lstnew(void *content);
+void		ft_lstadd_front(t_list **lst, t_list *new);
+int			ft_lstsize(t_list *lst);
+t_list		*ft_lstlast(t_list *lst);
+void		ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstdelone(t_list *lst, void (*del)(void *));
+void		ft_lstclear(t_list **lst, void (*del)(void *));
+void		ft_lstiter(t_list *lst, void (*f)(void *));
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 typedef struct s_vars
 {
-	size_t	i;
-	int		j;
-	int		s_word;
+	size_t		i;
+	int			j;
+	int			s_word;
 }				t_vars;
 
 #endif
