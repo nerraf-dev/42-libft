@@ -1,26 +1,27 @@
 #include "tests.h"
 #include <assert.h>
+#include <ctype.h>
 
 void test_ft_isdigit(void)
 {
     // Test cases for digits
-    assert(ft_isdigit('0') == 1);
-    assert(ft_isdigit('1') == 1);
-    assert(ft_isdigit('2') == 1);
-    assert(ft_isdigit('3') == 1);
-    assert(ft_isdigit('4') == 1);
-    assert(ft_isdigit('5') == 1);
-    assert(ft_isdigit('6') == 1);
-    assert(ft_isdigit('7') == 1);
-    assert(ft_isdigit('8') == 1);
-    assert(ft_isdigit('9') == 1);
+    assert(isdigit('0') == ft_isdigit('0'));
+    assert(isdigit('1') == ft_isdigit('1'));
+    assert(isdigit('2') == ft_isdigit('2'));
+    assert(isdigit('3') == ft_isdigit('3'));
+    assert(isdigit('4') == ft_isdigit('4'));
+    assert(isdigit('5') == ft_isdigit('5'));
+    assert(isdigit('6') == ft_isdigit('6'));
+    assert(isdigit('7') == ft_isdigit('7'));
+    assert(isdigit('8') == ft_isdigit('8'));
+    assert(isdigit('9') == ft_isdigit('9'));
 
     // Test cases for non-digits
-    assert(ft_isdigit('a') == 0);
-    assert(ft_isdigit('A') == 0);
-    assert(ft_isdigit(' ') == 0);
-    assert(ft_isdigit('\n') == 0);
-    assert(ft_isdigit('$') == 0);
+    assert(isdigit('a') == ft_isdigit('a'));
+    assert(isdigit('A') == ft_isdigit('A'));
+    assert(isdigit(' ') == ft_isdigit(' '));
+    assert(isdigit('\n') == ft_isdigit('\n'));
+    assert(isdigit('$') == ft_isdigit('$'));
 
 
 

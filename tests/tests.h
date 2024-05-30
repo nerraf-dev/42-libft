@@ -28,5 +28,24 @@ void test_ft_strnstr(void);
 void test_ft_atoi(void);
 void test_ft_calloc(void);
 void test_ft_strdup(void);
+void test_ft_substr(void);
+void test_ft_strjoin(void);
+void test_ft_strtrim(void);
+// void test_ft_split(void);
+// void test_ft_itoa(void);
+// void test_ft_strmapi(void);
+// void test_ft_putchar_fd(void);
+// void test_ft_putstr_fd(void);
+// void test_ft_putendl_fd(void);
+// void test_ft_putnbr_fd(void);
+// void test_ft_lstnew(void);
+// void test_ft_lstadd_front(void);
+// void test_ft_lstsize(void);
+// void test_ft_lstlast(void);
+// void test_ft_lstadd_back(void);
+// void test_ft_lstdelone(void);
+// void test_ft_lstclear(void);
+// void test_ft_lstiter(void);
+// void test_ft_lstmap(void);
 
 #endif
