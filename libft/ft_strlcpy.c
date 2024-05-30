@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 20:08:09 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/28 10:34:28 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/30 13:32:24 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 ft_strlcpy() copies up to dstsize - 1 characters from the string src to dst,
  NUL-terminating the result if dstsize is not 0.
 
- return the total length of the string they tried to create.
- For strlcpy() that means the length of src. 
+ return the total length of the string they tried to create,
+i.e the length of src.
 */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -24,8 +24,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	src_len;
 
-	if (src == NULL)
-		return (0);
 	i = 0;
 	src_len = ft_strlen(src);
 	if (dstsize != 0)
