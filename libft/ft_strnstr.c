@@ -6,12 +6,22 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:08:54 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/17 12:22:59 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/31 12:28:50 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * Searches for the first occurrence of a substring within a given string,
+ * but limits the search to a specified length.
+ *
+ * @param content The string to search within.
+ * @param search_str The substring to search for.
+ * @param len The maximum number of characters to search within the content.
+ * @return A pointer to the first occurrence of the substring within the content,
+ *         or NULL if the substring is not found.
+ */
 char	*ft_strnstr(const char *content, const char *search_str, size_t len)
 {
 	size_t	i;
@@ -21,7 +31,7 @@ char	*ft_strnstr(const char *content, const char *search_str, size_t len)
 	i = 0;
 	j = 0;
 	if (search_str[0] == '\0')
-		return ((char *) content);
+		return ((char *)content);
 	while (content[i] != '\0' && i < len)
 	{
 		start = i;

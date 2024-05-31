@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:53:55 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/21 12:07:34 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/31 17:00:27 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	i = 0;
 	j = start;
-	while (i < len)
+	while ((size_t)i < len)
 	{
 		substr[i] = s[j];
 		i++;

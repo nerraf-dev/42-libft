@@ -6,10 +6,11 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:53:26 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/17 12:22:45 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/31 17:12:25 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /* Converts a string to an integer.
  * takes a string `str` as input and converts it to an integer.
  * Skips any leading whitespace chars & checks for an optional sign (+/-).

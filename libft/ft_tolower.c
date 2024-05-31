@@ -6,9 +6,11 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 17:51:55 by sfarren           #+#    #+#             */
-/*   Updated: 2024/04/15 18:09:57 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/31 17:11:09 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

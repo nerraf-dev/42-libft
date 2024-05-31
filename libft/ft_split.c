@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:07:03 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/27 21:48:43 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/31 17:01:25 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static int	word_count(const char *str, char c);
 static char	*fill_word(const char *str, int start, int end);
 static void	*ft_free(char **strs, int count);
 static char	**init_words(char const *s, char c);
-static void	init_vars(size_t *i, int *j, int *s_word);
 /*
  * Splits a string into an array of substrings based on a delimiter character.
  *

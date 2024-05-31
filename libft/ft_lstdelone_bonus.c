@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 21:49:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/31 17:12:05 by sfarren          ###   ########.fr       */
+/*   Created: 2024/05/28 13:17:56 by sfarren           #+#    #+#             */
+/*   Updated: 2024/05/31 12:26:40 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+/**
+ * Deletes a single node from a linked list and frees the memory allocated to it.
+ *
+ * @param lst The node to be deleted.
+ * @param del The function used to free the memory of the node's content.
+ */
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	if (lst == 0 || del == 0)
+		return ;
+	del(lst->content);
+	free(lst);
 }

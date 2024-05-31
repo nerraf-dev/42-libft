@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 21:49:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/31 17:12:05 by sfarren          ###   ########.fr       */
+/*   Created: 2024/05/28 13:11:12 by sfarren           #+#    #+#             */
+/*   Updated: 2024/05/28 21:31:00 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+/**
+ * Adds a new element to the end of a linked list.
+ *
+ * @param lst The address of a pointer to the first element of the list.
+ * @param new The element to add to the list.
+ */
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	t_list	*last;
+
+	if (*lst == 0)
+		*lst = new;
 	else
-		return (0);
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}
 }

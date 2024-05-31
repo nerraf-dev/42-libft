@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fPIC
 # Probably want to check if the libft is up to date and the location
 LDFLAGS = -L../libft -lft
 NAME = tests

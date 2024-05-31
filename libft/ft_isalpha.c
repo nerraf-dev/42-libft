@@ -6,10 +6,11 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 20:40:41 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/27 18:49:25 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/05/31 17:12:10 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*
  * Checks if the given character is an alphabetic character.
  *
