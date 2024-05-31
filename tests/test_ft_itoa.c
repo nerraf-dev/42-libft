@@ -1,26 +1,26 @@
-#include <assert.h>
+
 #include "tests.h"
+#include <assert.h>
+#include <limits.h>
 
 void test_ft_itoa()
 {
-    char	*int_str;
+	// Test positive numbers
+	assert(strcmp(ft_itoa(42), "42") == 0);
+	assert(strcmp(ft_itoa(123), "123") == 0);
+	assert(strcmp(ft_itoa(999), "999") == 0);
 
-	int_str = ft_itoa(42);
-	printf("ft_itoa RESULT: %s\n", int_str);
+	// Test negative numbers
+	assert(strcmp(ft_itoa(-42), "-42") == 0);
+	assert(strcmp(ft_itoa(-123), "-123") == 0);
+	assert(strcmp(ft_itoa(-999), "-999") == 0);
 
-	int_str = ft_itoa(123);
-	printf("ft_itoa RESULT: %s\n", int_str);
+	// Test zero
+	assert(strcmp(ft_itoa(0), "0") == 0);
 
-	int_str = ft_itoa(0);
-	printf("ft_itoa RESULT: %s\n", int_str);
+	// Test maximum and minimum integer values
+	assert(strcmp(ft_itoa(INT_MAX), "2147483647") == 0);
+	assert(strcmp(ft_itoa(INT_MIN), "-2147483648") == 0);
 
-	int_str = ft_itoa(999);
-	printf("ft_itoa RESULT: %s\n", int_str);
-	
-	int_str = ft_itoa(-999);
-	printf("ft_itoa RESULT: %s\n", int_str);
-
-	int_str = ft_itoa(-123);
-	printf("ft_itoa RESULT: %s\n", int_str);
-
+	printf("ft_itoa passed successfully!\n");
 }
