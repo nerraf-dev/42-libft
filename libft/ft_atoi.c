@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:53:26 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/31 17:12:25 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/06/01 19:26:22 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  * @param str The string to be converted to an integer.
  * @return The converted integer value.
 */
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
