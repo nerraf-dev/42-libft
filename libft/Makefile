@@ -6,7 +6,7 @@
 #    By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/30 19:05:57 by sfarren           #+#    #+#              #
-#    Updated: 2024/05/31 16:59:11 by sfarren          ###   ########.fr        #
+#    Updated: 2024/06/01 19:21:55 by sfarren          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,9 @@ OBJS = $(SRC:.c=.o)
 BONUS_SRC = ft_lstadd_back_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c \
 			ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstdelone_bonus.c ft_lstlast_bonus.c \
 			ft_lstnew_bonus.c
+BONUS_SRC = ft_lstadd_back_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c \
+			ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstdelone_bonus.c ft_lstlast_bonus.c \
+			ft_lstnew_bonus.c
 
 BONUS_OBJS = $(BONUS_SRC:.c=.o)
 
@@ -35,7 +38,9 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	ranlib $(NAME)
+
+%.o: %.c
+	$(CC) $(CCFLAGS) -c $< -o $@
 
 bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
@@ -51,7 +56,9 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: 
+re:
+	fclean all
+re:
 	$(MAKE) fclean
 	$(MAKE) all
 

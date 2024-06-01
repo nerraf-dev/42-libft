@@ -6,50 +6,31 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:07:03 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/31 17:01:25 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/06/01 19:22:19 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	word_count(const char *str, char c);
-static char	*fill_word(const char *str, int start, int end);
-static void	*ft_free(char **strs, int count);
-static char	**init_words(char const *s, char c);
-/*
- * Splits a string into an array of substrings based on a delimiter character.
- *
- * @param s The string to split.
- * @param c The delimiter character.
- * @return An array of substrings, or NULL if memory allocation fails.
- */
-
-char	**ft_split(const char *s, char c)
+static int	word_count(const char *str, char c)
 {
-	char	**words;
-	t_vars	vars;
+	int	count;
+	int	x;
 
-	vars.i = 0;
-	vars.j = 0;
-	vars.s_word = -1;
-	words = init_words(s, c);
-	if (!words)
-		return (0);
-	while (vars.i <= ft_strlen(s))
+	count = 0;
+	x = 0;
+	while (*str)
 	{
-		if (s[vars.i] != c && vars.s_word < 0)
-			vars.s_word = vars.i;
-		else if ((s[vars.i] == c || s[vars.i] == '\0') && vars.s_word >= 0)
+		if (*str != c && x == 0)
 		{
-			words[vars.j] = fill_word(s, vars.s_word, vars.i);
-			if (!(words[vars.j]))
-				return (ft_free(words, vars.j));
-			vars.s_word = -1;
-			vars.j++;
+			x = 1;
+			count++;
 		}
-		vars.i++;
+		else if (*str == c)
+			x = 0;
+		str++;
 	}
-	return (words);
+	return (count);
 }
 
 static char	**init_words(char const *s, char c)
@@ -97,23 +78,38 @@ static char	*fill_word(const char *str, int start, int end)
 	return (word);
 }
 
-static int	word_count(const char *str, char c)
-{
-	int	count;
-	int	x;
+/*
+ * Splits a string into an array of substrings based on a delimiter character.
+ *
+ * @param s The string to split.
+ * @param c The delimiter character.
+ * @return An array of substrings, or NULL if memory allocation fails.
+ */
 
-	count = 0;
-	x = 0;
-	while (*str)
+char	**ft_split(const char *s, char c)
+{
+	char	**words;
+	t_vars	vars;
+
+	vars.i = 0;
+	vars.j = 0;
+	vars.s_word = -1;
+	words = init_words(s, c);
+	if (!words)
+		return (0);
+	while (vars.i <= ft_strlen(s))
 	{
-		if (*str != c && x == 0)
+		if (s[vars.i] != c && vars.s_word < 0)
+			vars.s_word = vars.i;
+		else if ((s[vars.i] == c || s[vars.i] == '\0') && vars.s_word >= 0)
 		{
-			x = 1;
-			count++;
+			words[vars.j] = fill_word(s, vars.s_word, vars.i);
+			if (!(words[vars.j]))
+				return (ft_free(words, vars.j));
+			vars.s_word = -1;
+			vars.j++;
 		}
-		else if (*str == c)
-			x = 0;
-		str++;
+		vars.i++;
 	}
-	return (count);
+	return (words);
 }
