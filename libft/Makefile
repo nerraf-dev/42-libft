@@ -55,4 +55,4 @@ re:
 	$(MAKE) fclean
 	$(MAKE) all
 
-.phony: all clean fclean re bonus
+.PHONY: all clean fclean re bonus
