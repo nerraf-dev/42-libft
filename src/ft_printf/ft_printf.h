@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:20:31 by sfarren           #+#    #+#             */
-/*   Updated: 2024/12/29 17:46:13 by sfarren          ###   ########.fr       */
+/*   Updated: 2024/12/29 18:02:59 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,22 +68,19 @@ int		ft_printf_fd(int fd, const char *str, ...);
  * @param count A pointer to integer that tracks the num of characters printed.
  */
 void	ft_printnbr_base(long long n, char *base, int *count);
-/**
- * Prints a number in a specified base.
- *
- * @param n     The number to be printed.
- * @param base  The base in which the number should be printed.
- * @param count  keeps track of the number of characters printed.
- */
-void	ft_printnbr_base(long long n, char *base, int *count);
 
 /**
- * Converts an unsigned integer to a string representation.
+ * Prints a long long integer in a specified base to a file descriptor.
  *
- * @param n The unsigned integer to be converted.
- * @return  The string representation of the unsigned integer.
+ * This function prints the given long long integer `n` in the specified `base` to a file descriptor.
+ *
+ * @param n     The long long integer to be printed.
+ * @param base  The string containing the characters used for the base.
+ * @param count A pointer to integer that tracks the num of characters printed.
+ * @param fd    The file descriptor to which the output should be printed.
  */
-char	*ft_utoa(unsigned int n);
+void	ft_printnbr_base_fd(long long n, char *base, int *count, int fd);
+
 
 /**
  * Prints a character.
@@ -111,6 +108,15 @@ void	ft_printchr_fd(char c, int *count, int fd);
 void	ft_printstr(char *s, int *count);
 
 /**
+ * Prints a string to a file descriptor.
+ *
+ * @param s     The string to be printed.
+ * @param count keeps track of the number of characters printed.
+ * @param fd    The file descriptor to which the string should be printed.
+ */
+void	ft_printstr_fd(char *s, int *count, int fd);
+
+/**
  * Prints a pointer address.
  *
  * @param ptr   The pointer address to be printed.
@@ -118,7 +124,24 @@ void	ft_printstr(char *s, int *count);
  */
 void	ft_printptr(void *ptr, int *count);
 
+/**
+ * Prints a pointer address to a file descriptor.
+ *
+ * @param ptr   The pointer address to be printed.
+ * @param count keeps track of the number of characters printed.
+ * @param fd    The file descriptor to which the pointer address should be printed.
+ */
+void	ft_printptr_fd(void *ptr, int *count, int fd);
+
 // libft
 char	*ft_strchr(const char *s, int c);
+
+/**
+ * Converts an unsigned integer to a string representation.
+ *
+ * @param n The unsigned integer to be converted.
+ * @return  The string representation of the unsigned integer.
+ */
+char	*ft_utoa(unsigned int n);
 
 #endif
