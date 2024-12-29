@@ -6,7 +6,7 @@
 #    By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/02 18:34:39 by sfarren           #+#    #+#              #
-#    Updated: 2024/09/20 11:41:41 by sfarren          ###   ########.fr        #
+#    Updated: 2024/12/29 17:50:48 by sfarren          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC = 	ft_printchr.c \
 		ft_printptr.c \
 		ft_printstr.c \
 		ft_printnbr_base.c \
+		ft_printf_fd.c \
 
 OBJS = $(SRC:.c=.o)
 
