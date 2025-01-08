@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:20:31 by sfarren           #+#    #+#             */
-/*   Updated: 2024/12/29 18:02:59 by sfarren          ###   ########.fr       */
+/*   Updated: 2025/01/08 15:05:36 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,10 @@ int		ft_printf(const char *str, ...);
 /**
  * Prints formatted output to a file descriptor.
  *
- * This function takes a file descriptor `fd`, a format string `str`, and a variable
- * number of arguments, and prints the formatted output to the specified file descriptor.
- * It supports various format specifiers, such as `%d` for integers, `%s` for strings, etc.
+ * This function takes a file descriptor `fd`, a format string `str`, and a
+ * variable number of arguments, and prints the formatted output to the
+ * specified file descriptor. It supports various format specifiers, such as
+ * `%d` for integers, `%s` for strings, etc.
  *
  * @param fd  The file descriptor to which the output should be printed.
  * @param str The format string specifying the output format.
@@ -72,7 +73,8 @@ void	ft_printnbr_base(long long n, char *base, int *count);
 /**
  * Prints a long long integer in a specified base to a file descriptor.
  *
- * This function prints the given long long integer `n` in the specified `base` to a file descriptor.
+ * This function prints the given long long integer `n` in the specified `base`
+ * to a file descriptor.
  *
  * @param n     The long long integer to be printed.
  * @param base  The string containing the characters used for the base.
@@ -81,12 +83,11 @@ void	ft_printnbr_base(long long n, char *base, int *count);
  */
 void	ft_printnbr_base_fd(long long n, char *base, int *count, int fd);
 
-
 /**
  * Prints a character.
  *
  * @param c     The character to be printed.
- * @param count  keeps track of the number of characters printed.
+ * @param count keeps track of the number of characters printed.
  */
 void	ft_printchr(char c, int *count);
 
@@ -94,7 +95,7 @@ void	ft_printchr(char c, int *count);
  * Prints a character to a file descriptor.
  *
  * @param c     The character to be printed.
- * @param count  keeps track of the number of characters printed.
+ * @param count keeps track of the number of characters printed.
  * @param fd    The file descriptor to which the character should be printed.
  */
 void	ft_printchr_fd(char c, int *count, int fd);
@@ -129,7 +130,8 @@ void	ft_printptr(void *ptr, int *count);
  *
  * @param ptr   The pointer address to be printed.
  * @param count keeps track of the number of characters printed.
- * @param fd    The file descriptor to which the pointer address should be printed.
+ * @param fd    The file descriptor to which the pointer address should be
+ *              printed.
  */
 void	ft_printptr_fd(void *ptr, int *count, int fd);
 
