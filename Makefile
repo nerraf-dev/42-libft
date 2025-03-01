@@ -6,7 +6,7 @@
 #    By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/30 19:05:57 by sfarren           #+#    #+#              #
-#    Updated: 2025/01/16 17:25:05 by sfarren          ###   ########.fr        #
+#    Updated: 2025/03/01 15:45:23 by sfarren          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 
 SRC_DIR = src
 PRINTF_DIR = src/ft_printf
+GNL_DIR = src/gnl
 
 # Compiler and Flags
 UNAME_S := $(shell uname -s)
@@ -38,8 +39,11 @@ SRC_FILES = ft_atoi.c ft_isalpha.c ft_isprint.c ft_memcpy.c ft_strchr.c ft_strle
 PRINTF_FILES = ft_printchr.c ft_printf.c ft_printptr.c ft_printstr.c \
 				ft_printnbr_base.c ft_printf_fd.c \
 
+GNL_FILES = get_next_line.c get_next_line_utils.c
+
 SRC = $(foreach file, $(SRC_FILES), $(SRC_DIR)/$(file)) \
-	  $(foreach file, $(PRINTF_FILES), $(PRINTF_DIR)/$(file))
+	  $(foreach file, $(PRINTF_FILES), $(PRINTF_DIR)/$(file)) \
+	  $(foreach file, $(GNL_FILES), $(GNL_DIR)/$(file))
 
 OBJS = $(SRC:.c=.o)
 

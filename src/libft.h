@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 21:13:15 by sfarren           #+#    #+#             */
-/*   Updated: 2024/09/20 12:13:07 by sfarren          ###   ########.fr       */
+/*   Updated: 2025/03/01 15:44:18 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "./ft_printf/ft_printf.h"
+# include "./gnl/get_next_line.h"
 
 typedef struct s_list
 {
