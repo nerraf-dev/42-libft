@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:17:50 by sfarren           #+#    #+#             */
-/*   Updated: 2024/07/17 13:30:02 by sfarren          ###   ########.fr       */
+/*   Updated: 2025/04/27 19:21:48 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,37 @@ static void	format_handler(const char c, va_list args, int *count)
 		*count = -1;
 }
 
+/**
+ * @brief ft_printf - A simplified implementation of the printf function.
+ *
+ * This function processes the format string and prints characters or
+ * formatted output based on the format specifiers. It uses a variable
+ * argument list to handle the additional arguments corresponding to
+ * the format specifiers.
+ *
+ * d - integer
+ * i - integer
+ * s - string
+ * c - character
+ * % - percent sign
+ * x - hexadecimal (lowercase)
+ * X - hexadecimal (uppercase)
+ * u - unsigned integer
+ * p - pointer address
+ *
+ * @note This function is a simplified version of the standard printf
+ * function. It does not handle all format specifiers or error cases.
+ *
+ * @param str: The format string containing characters and format specifiers.
+ *       Format specifiers are preceded by a '%' character.
+ *       Supported specifiers are handled by the format_handler function.
+ * @returns print_counter: The total number of characters printed.
+ *
+ * Note:
+ * - The function uses va_list to handle the variable arguments.
+ * - The format_handler function is called to process format specifiers.
+ * - The ft_printchr function is used to print individual characters.
+ */
 int	ft_printf(const char *str, ...)
 {
 	int		i;
