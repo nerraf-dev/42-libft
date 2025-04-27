@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:46:16 by sfarren           #+#    #+#             */
-/*   Updated: 2024/06/02 14:55:08 by sfarren          ###   ########.fr       */
+/*   Updated: 2025/04/27 17:33:58 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	long int	i;
 
 	i = ft_strlen(s);
 	while (i >= 0)
