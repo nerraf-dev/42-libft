@@ -6,7 +6,7 @@
 #    By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/30 19:05:57 by sfarren           #+#    #+#              #
-#    Updated: 2025/03/01 15:45:23 by sfarren          ###   ########.fr        #
+#    Updated: 2025/04/27 17:30:39 by sfarren          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,8 @@ GNL_DIR = src/gnl
 
 # Compiler and Flags
 UNAME_S := $(shell uname -s)
-ifeq ($(UNAME_S), Darwin) # macOS
-	CC = gcc
-else
-	CC = clang # Default to clang for other systems, including 42's
-endif
+CC := $(shell command -v clang 2>/dev/null || command -v gcc 2>/dev/null || command -v cc 2>/dev/null)
+
 CFLAGS = -Wall -Wextra -Werror -g
 
 SRC_FILES = ft_atoi.c ft_isalpha.c ft_isprint.c ft_memcpy.c ft_strchr.c ft_strlen.c \
