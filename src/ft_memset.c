@@ -6,7 +6,7 @@
 /*   By: sfarren <sfarren@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 22:02:40 by sfarren           #+#    #+#             */
-/*   Updated: 2024/05/30 21:20:35 by sfarren          ###   ########.fr       */
+/*   Updated: 2025/05/06 12:35:04 by sfarren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
  */
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned int	i;
-	char			*str;
+	size_t	i;
+	char	*str;
 
 	i = 0;
 	str = (char *)b;
